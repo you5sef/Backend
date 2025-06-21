@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const jobSchema = new mongoose.Schema({
+  user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   shipmentType: String,
   shipmentWeight: Number,
   startingCity: String,
